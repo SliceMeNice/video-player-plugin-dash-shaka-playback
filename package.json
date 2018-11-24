@@ -1,0 +1,39 @@
+{
+  "name": "@slicemenice/video-player-plugin-dash-shaka-playback",
+  "version": "1.0.0",
+  "description": "An @slicemenice/video-player playback plugin to play MPEG-DASH streams via the Shaka player.",
+  "main": "dist/videoPlayerDashShakaPlayback.js",
+  "module": "dist/videoPlayerDashShakaPlayback.es.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "n-clean ./dist/ && rollup -c && rollup -c rollup.config.prod.js",
+    "release-to-branch": "branch-release -s build",
+    "watch": "rollup -cw"
+  },
+  "keywords": [],
+  "author": "SliceMeNice",
+  "contributors": [
+    {
+      "name": "Stefan Ullinger",
+      "email": "stefan@slicemenice.de"
+    }
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@slicemenice/video-player": "1.2.0",
+    "branch-release": "1.0.3",
+    "npm-build-tools": "2.2.5",
+    "rollup": "0.67.0",
+    "rollup-plugin-commonjs": "9.2.0",
+    "rollup-plugin-node-resolve": "3.4.0",
+    "rollup-plugin-typescript2": "0.17.2",
+    "rollup-plugin-uglify": "6.0.0",
+    "typescript": "3.1.6"
+  },
+  "peerDependencies": {
+    "@slicemenice/video-player": "1.2.x"
+  }
+}
